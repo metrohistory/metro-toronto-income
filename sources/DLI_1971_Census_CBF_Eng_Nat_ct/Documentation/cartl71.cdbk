@@ -1,0 +1,161 @@
+1                                                                               
+ Statistical area boundary file (CARTLIB)                                       
+ Principal investigator: Statistics Canada                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ Codebook by University of Toronto Data Library Service                         
+ 27/09/1995                                                                     
+ based on:                                                                      
+ CARTLIB : a library of census statistical area boundaries                      
+ for computer mapping : technical details./ by Russell S. Page                  
+ Ottawa, Ont.: Statistics Canada, Census Division,                              
+ August 31, 1972.                                                               
+                                                                                
+11. Introduction                                                                
+                                                                                
+ CARTLIB is a library of the boundary locations of census divisions             
+ and census tracts in a format usable by computer mapping programmes.           
+ The locations of the boundaries are approximate only, because they             
+ are intended solely for graphic display and the shapes have been               
+ generalized into polygons of from 3 to 98 sides. Each boundary is              
+ defined by the X-Y co-ordinates of each vertex in a clockwise                  
+ sequence, with the first vertex (the most northern one usually) being          
+ repeated at the end.                                                           
+                                                                                
+ The co-ordinates of the vertices of the census divisions are                   
+ determined by an arbitrary rectangular grid. Southern Ontario and              
+ Quebec are part of an inset of the main map of Canada, at a larger             
+ scale. The co-ordinates of the census tract polygons conform to                
+ the Universal Transverse Mercator Grid (6 degree zones) as printed             
+ on the National Topographical Series of maps. It should be noted,              
+ however, that because Calgary and Saint John, N.B. CMAs are located            
+ in two UTM zones, the co-ordinates have been converted to the grid             
+ of one zone. It is recommended that users first use the base maps at           
+ the following scales to get an idea of the best scale for their                
+ requirements: .006 for census divisions and .0016 for census tracts            
+ (this is the ratio of units on the output map to units in the file).           
+                                                                                
+12. Land area file : record layout                                              
+                                                                                
+ Field  Size      Columns   Type      Description                               
+ 1        2        1 -  2     A       Type of statistical area:                 
+                                      where: CD - census division               
+                                             CT - census tract                  
+                                                                                
+ 2        6        3 -  8     I       Statistical area code                     
+                                                                                
+                                      The Census geographic code of the         
+                                      area concerned.                           
+                                      Census division code - 4 digits           
+                                      Census tract code:                        
+                                        digits 1-3 - CMA/CA code                
+                                        digits 4-6 - CT code                    
+                                      See the Official Lists for codes          
+                                      and areas. Chicoutimi-Jonquiere           
+                                      are one unofficial tract, and are         
+                                      not included.                             
+                                                                                
+ 3        1             9     A       * if area is unofficial                   
+                                                                                
+                                      An asterisk for unofficial census         
+                                      tracts.                                   
+                                                                                
+ 4       11       10 - 20     A       Blank                                     
+                                                                                
+ 5       10       21 - 30     F       Land area in square miles                 
+                                                                                
+                                      The land area in square miles. For        
+                                      convenience, every area has two           
+                                      decimal places, but the census            
+                                      divisions were measured to the            
+                                      nearest square mile. These unofficial     
+                                      land areas were measured from             
+                                      topographic maps with a planimeter.       
+                                                                                
+13. Boundary file : record layout                                               
+                                                                                
+ Field  Size      Columns   Type      Description                               
+ 1        6        1 -  6     A       Statistical area code                     
+                                                                                
+                                      The Census geographic code of the         
+                                      area concerned.                           
+                                      Census division code - 4 digits           
+                                      Census tract code:                        
+                                        digits 1-3 - CMA/CA code                
+                                        digits 4-6 - CT code                    
+                                      See the Official Lists for codes          
+                                      and areas. Chicoutimi-Jonquiere           
+                                      are one unofficial tract, and are         
+                                      not included.                             
+                                                                                
+ 2        2        7 -  8     I       Sequence of polygons in                   
+                                      statistical area                          
+                                                                                
+                                      An integer indicating the sequence        
+                                      of polygons needed to delineate a         
+                                      statistical area, for the second          
+                                      and subsequent polygons if required       
+                                      (this rarely occurs).                     
+                                                                                
+ 3        1             9     A       * if area is unofficial                   
+                                                                                
+                                      An asterisk here indicates an             
+                                      unofficial census tract.                  
+                                                                                
+ 4        1            10     A       'A' for first record of each boundary     
+                                      An 'A' here indicates the first           
+                                      vertex of a polygon.                      
+                                                                                
+ 5        2       11 - 12     I       Sequence number of records in boundary    
+                                                                                
+                                      An integer indicating the sequence        
+                                      of vertices in each polygon.              
+                                                                                
+ 6        8       13 - 20     F       X co-ordinate of boundary vertex          
+                                                                                
+                                      The X co-ordinate is a decimal number.    
+                                                                                
+ 7       10       21 - 30     F       Y co-ordinate of boundary vertex          
+                                                                                
+                                      The Y co-ordinate is a decimal number.    
+1                                                                               
+  Appendix 1: Census metropolitan area (CMA) and Census agglomerate (CA)        
+              codes                                                             
+  CMA name                    Code  Frequency                                   
+  Calgary                        1        77                                    
+  Edmonton                       3        88                                    
+  Halifax                        4        48                                    
+  Hamilton                       5       109                                    
+  Kitchener                      6        45                                    
+  London                         7        59                                    
+  Montreal                       8       579                                    
+  Ottawa-Hull                   10       120                                    
+  Quebec                        11       100                                    
+  Regina                        12        29                                    
+  St. Catharines-Niagara        13        53                                    
+  St. John's                    14        29                                    
+  Saint John                    15        43                                    
+  Saskatoon                     16        22                                    
+  Sudbury                       19        30                                    
+  Thunder Bay                   20        25                                    
+  Toronto                       21       452                                    
+  Vancouver                     23       182                                    
+  Victoria                      24        43                                    
+  Windsor                       25        56                                    
+  Winnipeg                      26       106                                    
+                                                                                
+  CA name                     Code  Frequency                                   
+                                                                                
+  Brantford                     32        16                                    
+  Guelph                        37        14                                    
+  Kingston                      38        18                                    
+  Oshawa                        41        22                                    
+  Peterborough                  42        16                                    
+  Sarnia                        43        18                                    
+  Sault Ste. Marie              44        19                                    
+  Sherbrooke                    46        20                                    
+  Trois-Rivieres                48        21                                    

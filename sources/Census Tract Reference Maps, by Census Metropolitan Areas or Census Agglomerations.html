@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="js backgroundsize borderimage csstransitions fontface svg details progressbar meter mathml cors largeview wb-enable" dir="ltr" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / BoÃ®te Ã  outils de l'expÃ©rience Web (BOEW)
+     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Census Tract Reference Maps, by Census Metropolitan Areas or Census Agglomerations</title>
+<link rel="shortcut icon" href="https://www12.statcan.gc.ca/wet-boew/build/theme-gcwu-fegc/images/favicon.ico">
+
+	<!-- METADATA BEGINS | DEBUT DES METADONNEES -->
+
+	<meta http-equiv="Content-Style-type" content="type/css">
+	<meta http-equiv="Content-Script-type" content="type/x-javascript">
+	<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/">
+	<link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+	<meta name="title" content="Census Tract Reference Maps, by Census Metropolitan Areas or Census Agglomerations">
+	<meta name="description" content="Listing of a variety of geographic reference maps which show the location of the geographic areas for which census data are tabulated and disseminated. The maps display the boundaries, names and codes of standard geographic areas, as well as physical features, such as roads, railroads, coastlines, rivers and lakes.">
+	<!-- METADATA ENDS | FIN DES METADONNEES -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="dcterms:service" content="StatCan"> 
+<meta property="dcterms:accessRights" content="2">
+
+<!--[if gte IE 9 | !IE ]><!-->
+<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="https://www12.statcan.gc.ca/wet-boew4b/assets/favicon-mobile.png"><link href="https://www12.statcan.gc.ca/wet-boew4b/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
+<link rel="stylesheet" href="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/wet-boew.css">
+<script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/en.js"></script><script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/jquery.js"></script><script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/jquery_002.js"></script>
+<!--<![endif]-->
+
+<link rel="stylesheet" href="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/theme.css">
+
+<!--[if lt IE 9]>
+<link href="/wet-boew4b/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/wet-boew4b/css/ie8-wet-boew.min.css" />
+<script src="/wet-boew4b/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+
+<noscript><link rel="stylesheet" href="/wet-boew4b/css/noscript.min.css" /></noscript>
+<script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/satelliteLib-c2082deaf69c358c641c5eb20f94b615dd606662.js"></script>
+
+<script>dataLayer1 = [];</script>
+
+
+
+<!-- CSS TEMPLATE INCLUDE BEGINS | DEBUT DE L'INCLUSION -->
+
+<!-- CSS TEMPLATE INCLUDE ENDS | FIN DE L'INCLUSION -->
+
+<!-- CustomScriptsCSSStart -->
+
+<!-- CUSTOM CSS BEGINS | DEBUT DES CSS PERSONNALISES -->
+
+<style>
+#wb-cont {font-size:175%; margin-top:20px; margin-bottom:20px;}
+main h2 {font-size:140%;margin-top:20px;}
+main h3 {font-size:110%; color:#666;}
+.circle {
+	width:50px; 
+	height:50px; 
+	border-radius:25px; 
+	font-size:25px; 
+	color:#000; 
+	line-height:50px; 
+	text-align:center; 
+	background:#DDD;
+}
+#download {margin-top:20px; margin-bottom:20px;}
+#download div {margin-right:20px;}
+#DESC { font-style:italic; margin-bottom:40px;}
+</style>
+
+
+<!-- CUSTOM CSS ENDS | FIN DES CSS PERSONNALISES -->
+<!-- CustomScriptsCSSEnd -->
+<script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/s-code-contents-722625ca156c1c77875802d147e029edf6304536.js"></script><script charset="utf-8" class="lazyload" src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/resource.php"></script><link charset="utf-8" class="lazyload" href="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/resource.css" rel="stylesheet" type="text/css"><style type="text/css">:root{--sc-color: #2e8ae5;--pc-color: #3091f2;--lz-border-color: hsl(210,20%,95%);--lz-icon-color: hsl(210,10%,80%);--lz-text-color: hsl(210,30%,30%);--lz-light-color: hsl(210,10%,98%);--lz-input-border-color: hsl(210,10%,85%);--lz-input-bg-color: hsl(210,30%,99%);}#lz_overlay_chat .lz_form_check:checked + .lz_form_check_label:before {content: "";background: radial-gradient(#3091f2 35%, #f1f1f1 45%, #fafafa 100%);}</style></head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+
+<ul id="wb-tphp" class="wb-init wb-disable-inited">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+<li class="wb-slc"><a class="wb-sl" rel="alternate" href="https://www12.statcan.gc.ca/census-recensement/2011/geo/map-carte/ref/download_CMA_CT-telecharger_RMR_SR-eng.cfm?PRCODE=35&amp;CACODE=535&amp;MAP=2011-92146-535-00&amp;wbdisable=true">Switch to basic HTML version</a></li></ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a href="http://www12.statcan.gc.ca/census-recensement/includes/change.cfm" lang="fr">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="https://www.statcan.gc.ca/eng/start"><img src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/sig-blk-en.svg" alt="Symbol of Statistics Canada"><span class="wb-inv">Government of Canada, Statistics Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl" class=" wb-overlay modal-content overlay-def wb-panel-r wb-overlay-inited" aria-hidden="true"><header class="modal-header"><div class="modal-title">Search and menus</div></header><div class="modal-body"><section class="srch-pnl">
+<h2 class="wb-inv">Search</h2>
+<form action="https://www120.statcan.gc.ca/stcsr/en/sr1/srs" method="get" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q-imprt" class="wb-inv">Search website</label>
+<input type="hidden" name="fq" value="stclac:2">
+<input id="wb-srch-q-imprt" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" size="27" maxlength="150" placeholder="Search website">
+<datalist id="wb-srch-q-ac-imprt">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub-imprt" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section><section class="lng-ofr"><h3>Language selection</h3><ul class="list-inline"><a href="http://www12.statcan.gc.ca/census-recensement/includes/change.cfm" lang="fr">Français</a></ul></section><nav role="navigation" typeof="SiteNavigationElement" id="sec-pnl" class="sec-pnl wb-menu wb-menu-inited wb-init"><h3>Section menu</h3><ul class="list-unstyled mb-menu" role="menu"><li><details open=""><summary class="mb-item wb-navcurr" role="menuitem" aria-setsize="1" aria-posinset="1" aria-haspopup="true" tabindex="0">2011 Census Program</summary><ul class="list-unstyled mb-sm" role="menu" aria-expanded="true" aria-hidden="false"><li><a role="menuitem" aria-setsize="10" aria-posinset="1" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/rt-td/index-eng.cfm" title="Topics &lt; 2011 Census">Topics</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="2" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/dp-pd/index-eng.cfm" title="Data products &lt; 2011 Census">Data products</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="3" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/as-sa/index-eng.cfm" title="Analytical products &lt; 2011 Census">Analytical products</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="4" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/ref/index-eng.cfm" title="Reference materials &lt; 2011 Census">Reference materials</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="5" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/geo/index-eng.cfm" title="Geography &lt; 2011 Census">Geography</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="6" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/consultation/index-eng.cfm" title="Consultation &lt; 2011 Census">Consultation</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="7" tabindex="-1" class="" href="https://www12.statcan.gc.ca/census-recensement/2011/serv/index-eng.cfm" title="Custom services &lt; 2011 Census">Custom services</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="8" tabindex="-1" class="" href="http://www.statcan.gc.ca/ca-ra2011/index-eng.htm" title="Census of Agriculture &lt; 2011 Census">Census of Agriculture</a> </li><li><a role="menuitem" aria-setsize="10" aria-posinset="9" tabindex="-1" class="" ""-transparent="" ""-transparent-border-top"="" href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm" title="Census Program">2016 Census Program</a></li><li><a role="menuitem" aria-setsize="10" aria-posinset="10" tabindex="-1" class="" ""-transparent"="" href="https://www12.statcan.gc.ca/census-recensement/pc-eng.cfm">Previous censuses</a></li></ul></details></li></ul></nav><nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl" class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited"><h3>Topics menu</h3><ul class="list-unstyled mb-menu" role="menu"><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="1" tabindex="0" href="https://www150.statcan.gc.ca/n1/en/subjects?MM=1">Subjects</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="2" tabindex="-1" href="https://www150.statcan.gc.ca/n1/en/type/data?MM=1">Data</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="3" tabindex="-1" href="https://www150.statcan.gc.ca/n1/en/type/analysis?MM=1">Analysis</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="4" tabindex="-1" href="https://www150.statcan.gc.ca/n1/en/type/reference?MM=1">Reference</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="5" tabindex="-1" href="https://www150.statcan.gc.ca/n1/en/geo?MM=1">Geography</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="6" tabindex="-1" href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm?MM=1">Census</a></li><li><details><summary class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="7" aria-haspopup="true" tabindex="-1">Surveys and statistical programs</summary><ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true"><li><a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://www.statcan.gc.ca/eng/survey/index?MM=1">Information for survey participants</a></li><li><a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://www150.statcan.gc.ca/n1/en/type/surveys?MM=1">Results and documentation of surveys and statistical programs</a></li><li><a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://www.statcan.gc.ca/eng/our-data?MM=1">Using new and existing data for official statistics</a></li><li><a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://www.statcan.gc.ca/eng/surveys?MM=1">Surveys and statistical programs – Main page</a></li></ul></details></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="8" tabindex="-1" href="https://www.statcan.gc.ca/eng/about/statcan?MM=1">About StatCan</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="9" aria-posinset="9" tabindex="-1" href="https://www.canada.ca/en.html">Canada.ca</a></li></ul></nav><nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu wb-menu-inited wb-init"><h3>About government</h3><ul class="list-unstyled mb-menu" role="menu"><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="1" tabindex="0" href="https://www.statcan.gc.ca/eng/reference/refcentre/index?MM=1">Contact us</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="2" tabindex="-1" href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="3" tabindex="-1" href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="4" tabindex="-1" href="https://www.canada.ca/en/news.html">News</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="5" tabindex="-1" href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="6" tabindex="-1" href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="7" tabindex="-1" href="http://pm.gc.ca/eng">Prime Minister</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="8" tabindex="-1" href="https://www.canada.ca/en/government/system.html">How government works</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="9" tabindex="-1" href="http://open.canada.ca/en/">Open government</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="10" tabindex="-1" href="https://www.canada.ca/en/social.html">Social media</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="11" tabindex="-1" href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="12" tabindex="-1" href="https://www.canada.ca/en/government/about.html">About Canada.ca</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="13" tabindex="-1" href="https://www.statcan.gc.ca/eng/reference/important-notices?MM=1">Terms and conditions</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="14" tabindex="-1" href="https://www.statcan.gc.ca/eng/reference/privacy?MM=1">Privacy</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="15" aria-posinset="15" tabindex="-1" href="https://www12.statcan.gc.ca/census-recensement/2011/geo/map-carte/ref/download_CMA_CT-telecharger_RMR_SR-eng.cfm?PRCODE=35&amp;CACODE=535&amp;MAP=2011-92146-535-00#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></li></ul></nav></div><div class="modal-footer"><button type="button" class="btn btn-sm btn-primary pull-left overlay-close" style="" title="Close (escape key)">Close<span class="wb-inv">(escape key)</span></button></div><button type="button" class="mfp-close overlay-close" title="Close: Search and menus (escape key)">×<span class="wb-inv"> Close: Search and menus (escape key)</span></button></div>
+</section>
+
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Search</h2>
+<form action="https://www120.statcan.gc.ca/stcsr/en/sr1/srs" method="get" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input type="hidden" name="fq" value="stclac:2">
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" size="27" maxlength="150" placeholder="Search website">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" data-trgt="mb-pnl" data-ajax-replace="/wet-boew4b/ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+
+<!-- DataAjaxFragmentStart -->
+<!-- secondary navigation if enabled -->
+<div class="pnl-strt container nvbar">
+	<h2 class="wb-inv">Topics menu</h2>
+	<div class="row">
+		<ul class="list-inline menu" role="menubar">
+			<li><a href="https://www150.statcan.gc.ca/n1/en/subjects?MM=1" class="item" tabindex="0" aria-posinset="1" aria-setsize="9" role="menuitem">Subjects</a></li>
+			<li><a href="https://www150.statcan.gc.ca/n1/en/type/data?MM=1" class="item" tabindex="-1" aria-posinset="2" aria-setsize="9" role="menuitem">Data</a></li>
+			<li><a href="https://www150.statcan.gc.ca/n1/en/type/analysis?MM=1" class="item" tabindex="-1" aria-posinset="3" aria-setsize="9" role="menuitem">Analysis</a></li>
+			<li><a href="https://www150.statcan.gc.ca/n1/en/type/reference?MM=1" class="item" tabindex="-1" aria-posinset="4" aria-setsize="9" role="menuitem">Reference</a></li>
+			<li><a href="https://www150.statcan.gc.ca/n1/en/geo?MM=1" class="item" tabindex="-1" aria-posinset="5" aria-setsize="9" role="menuitem">Geography</a></li>
+			<li><a href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm?MM=1" class="item" tabindex="-1" aria-posinset="6" aria-setsize="9" role="menuitem">Census</a></li>
+			<li><a href="#surveys" class="item" tabindex="-1" aria-posinset="7" aria-setsize="9" role="menuitem" aria-haspopup="true">Surveys and statistical programs<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+				<ul class="sm list-unstyled" id="surveys" role="menu" aria-expanded="false" aria-hidden="true">
+					<li><a href="https://www.statcan.gc.ca/eng/survey/index?MM=1" tabindex="-1" aria-posinset="1" aria-setsize="4" role="menuitem">Information for survey participants</a></li>
+					<li><a href="https://www150.statcan.gc.ca/n1/en/type/surveys?MM=1" tabindex="-1" aria-posinset="2" aria-setsize="4" role="menuitem">Results and documentation of surveys and statistical programs</a></li>
+					<li><a href="https://www.statcan.gc.ca/eng/our-data?MM=1" tabindex="-1" aria-posinset="3" aria-setsize="4" role="menuitem">Using new and existing data for official statistics</a></li>
+					<li class="slflnk"><a href="https://www.statcan.gc.ca/eng/surveys?MM=1" tabindex="-1" aria-posinset="4" aria-setsize="4" role="menuitem">Surveys and statistical programs – Main page</a></li>
+				</ul>
+			</li>
+			<li><a href="https://www.statcan.gc.ca/eng/about/statcan?MM=1" class="item" tabindex="-1" aria-posinset="8" aria-setsize="9" role="menuitem">About StatCan</a></li>
+			<li><a href="https://www.canada.ca/en.html" class="item" tabindex="-1" aria-posinset="9" aria-setsize="9" role="menuitem">Canada.ca</a></li>
+		</ul>
+	</div>
+</div>
+<!-- DataAjaxFragmentEnd -->
+
+</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+
+<!-- Breadcrumb trail -->
+<ol class="breadcrumb">
+    <li><a href="http://www.statcan.gc.ca/start-debut-eng.html">Home</a></li>
+    <li><a href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm">Census Program</a></li>  
+    <li><a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/index-eng.cfm" title="2011 Census Geography">Geography</a></li>  
+    <li><a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/map-carte/ref/index-eng.cfm">Reference maps</a></li>  
+
+    <li><a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/map-carte/ref/index-CTDA-eng.cfm"><abbr title="Census Tract">CT</abbr> Reference Maps</a></li>   
+    <li><a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/map-carte/ref/cma_ca_ct-rmr_ar_sr/index-eng.cfm">by <abbr title="Census Metropolitan Areas">CMAs</abbr> or <abbr title="Census Agglomerations">CAs</abbr></a></li>
+    <li>Toronto</li>
+    
+  
+         
+    
+
+</ol>
+
+				</div> <!--row-->
+			</div> <!--container-->
+	</nav> <!--#wb-bc-->
+</header>
+
+<div class="container">
+<div class="row">
+
+<main property="mainContentOfPage" class="col-md-9 col-md-push-3" role="main">
+
+
+
+	<section id="archived" class="alert alert-warning wb-inview wb-init wb-inview-inited" data-inview="archived-bnr" data-inviewstate="partial">
+        <h2>Archived Content</h2>
+        <p>Information identified as archived is provided for reference,
+ research or recordkeeping purposes. It is not subject to the Government
+ of Canada Web Standards and has not been altered or updated since it 
+was archived. Please&nbsp;<a href="http://www.statcan.gc.ca/eng/reference/refcentre/index">contact us</a> to request a format other than those available.</p>
+    </section>
+
+    <section id="archived-bnr" class="wb-overlay modal-content overlay-def wb-bar-t wb-init wb-overlay-inited outside-off open" aria-hidden="false">
+        <header>
+            <h2 class="wb-inv">Archived Content</h2>
+        </header>
+        <p><a href="javascript:;" onclick="document.location.hash='#archived';">Content is archived.<span class="glyphicon glyphicon-chevron-up"></span></a></p>
+    <button type="button" class="mfp-close overlay-close" title="Close overlay">×<span class="wb-inv"> Close overlay</span></button></section>
+
+<h1 id="wb-cont">Census Tract Reference Maps, by Census Metropolitan Areas or Census Agglomerations</h1>
+
+<!-- CONTENT TITLE BEGINS | DEBUT DU TITRE DU CONTENU -->
+        
+<!-- CONTENT TITLE ENDS | FIN DU TITRE DU CONTENU -->
+
+
+<p class="lead">Available for downloading or viewing:</p>
+<p class="sr-only"><a href="#DESC_B">Long description</a></p>
+
+<div id="download">
+<div class="circle pull-left"><span class="glyphicon glyphicon-save"></span></div>
+<p>
+<a href="https://www12.statcan.gc.ca/census-recensement/2011/geo/map-carte/pdf/CMA-CA-CT_RMR-AR-SR/2011-92146-535-00.pdf">Census Tract Reference Maps, by Census Metropolitan Areas or Census Agglomerations
+ - (2011-92146-535-00.pdf)      6448 kb</a>
+</p>
+</div>
+<div class="clearfix"></div> 
+
+<p id="DESC"><a id="DESC_B" name="DESC_B"></a>This is a reference map showing census tracts for the 
+  
+    census metropolitan area
+     of
+  Toronto.</p>
+<h2>Source</h2>
+<p>Source: Statistics Canada, Geography Division, 2011 Census of Population; Hydrography, GeoBase<abbr title="Registered Trademark">®</abbr>.</p>
+<h2>Legend</h2>
+<p>Census metropolitan areas and census agglomerations are outlined in a
+ thick dark grey line. Census metropolitan areas and census 
+agglomerations surrounding the target area are shaded light grey, while 
+areas outside census metropolitan areas and census agglomerations are 
+shaded dark grey.</p>
+<p>Census tracts are outlined in a solid red line, and labelled in red text with their six-digit code.</p>
+<p>Census subdivisions are outlined in a black line, and their name and type are labelled on the map with black text. </p>
+<p>Designated places are outlined in a green line and shaded in a light 
+yellow. The designated place names are labelled on the map with green 
+text.</p>
+<p>The  cores are shaded in dark pink while secondary cores are shaded 
+in light pink. Fringe areas are shaded in light pink with a grid pattern
+ and the remainder is white indicating rural area.</p>
+<p>Where available roads, railways and water features are displayed and 
+labelled on the map for reference purposes.  Roads appear on the map in a
+ thin grey line. Railways appear on the map in a thin grey dashed line. 
+Linear water features appear on the map as a thin blue line while water 
+bodies are shaded blue; where available, they are labelled with a bold 
+italicized blue font.</p>
+<p>Where applicable, inset maps have been provided to permit greater visibility of the more congested areas.</p>
+<p>All maps in this series are oriented to the north. A north arrow is provided to indicate orientation.</p>
+<p>The maps vary in scale and size.  Scale is expressed on this map as a representative fraction and also with a graphic bar scale.</p>
+<p>The map projection for all maps is Lambert Conformal Conic utilizing 
+specific provincial parameters. Census metropolitan areas and census 
+agglomerations which cross provincial boundaries use the projection 
+parameters associated with the provincial part which is larger in terms 
+of land area. The projection parameters are provided for this map, 
+including standard parallels, central meridian and latitude of origin.</p>
+<h2>Data</h2>
+
+<details>
+<summary>The following census tracts are displayed for the Toronto 
+    census metropolitan area.
+</summary>
+
+
+
+<div class="row mrgn-tp-lg">
+		<div class="col-sm-2 col-xs-4">
+            <ul>
+                <li>0001.00</li><li>0002.00</li><li>0003.00</li><li>0004.00</li><li>0005.00</li><li>0006.00</li><li>0007.01</li><li>0007.02</li><li>0008.00</li><li>0009.00</li><li>0010.01</li><li>0010.02</li><li>0011.00</li><li>0012.01</li><li>0012.02</li><li>0013.00</li><li>0014.00</li><li>0015.00</li><li>0016.00</li><li>0017.00</li><li>0018.00</li><li>0019.00</li><li>0020.00</li><li>0021.00</li><li>0022.00</li><li>0023.00</li><li>0024.00</li><li>0025.00</li><li>0026.00</li><li>0027.00</li><li>0028.00</li><li>0029.00</li><li>0030.00</li><li>0031.00</li><li>0032.00</li><li>0033.00</li><li>0034.01</li><li>0034.02</li><li>0035.00</li><li>0036.00</li><li>0037.00</li><li>0038.00</li><li>0039.00</li><li>0040.00</li><li>0041.00</li><li>0042.00</li><li>0043.00</li><li>0044.00</li><li>0045.00</li><li>0046.00</li><li>0047.01</li><li>0047.02</li><li>0048.00</li><li>0049.00</li><li>0050.01</li><li>0050.02</li><li>0051.00</li><li>0052.00</li><li>0053.00</li><li>0054.00</li><li>0055.00</li><li>0056.00</li><li>0057.00</li><li>0058.00</li><li>0059.00</li><li>0060.00</li><li>0061.00</li><li>0062.01</li><li>0062.02</li><li>0063.01</li><li>0063.02</li><li>0064.00</li><li>0065.00</li><li>0066.00</li><li>0067.00</li><li>0068.00</li><li>0069.00</li><li>0070.00</li><li>0071.00</li><li>0072.01</li><li>0072.02</li><li>0073.00</li><li>0074.00</li><li>0075.00</li><li>0076.00</li><li>0077.00</li><li>0078.00</li><li>0079.00</li><li>0080.01</li><li>0080.02</li><li>0081.00</li><li>0082.00</li><li>0083.00</li><li>0084.00</li><li>0085.00</li><li>0086.00</li><li>0087.00</li><li>0088.00</li><li>0089.00</li><li>0090.00</li><li>0091.01</li><li>0091.02</li><li>0092.00</li><li>0093.00</li><li>0094.00</li><li>0095.00</li><li>0096.00</li><li>0097.01</li><li>0097.02</li><li>0098.00</li><li>0099.00</li><li>0100.00</li><li>0101.00</li><li>0102.01</li><li>0102.02</li><li>0102.03</li><li>0103.00</li><li>0104.00</li><li>0105.00</li><li>0106.00</li><li>0107.00</li><li>0108.00</li><li>0109.00</li><li>0110.00</li><li>0111.00</li><li>0112.00</li><li>0113.00</li><li>0114.00</li><li>0115.00</li><li>0116.00</li><li>0117.00</li><li>0118.00</li><li>0119.00</li><li>0120.00</li><li>0121.00</li><li>0122.00</li><li>0123.00</li><li>0124.00</li><li>0125.00</li><li>0126.00</li><li>0127.00</li><li>0128.02</li><li>0128.03</li><li>0128.04</li><li>0129.00</li><li>0130.00</li><li>0131.00</li><li>0132.00</li><li>0133.00</li><li>0134.00</li><li>0135.00</li><li>0136.01</li><li>0136.02</li><li>0137.00</li><li>0138.00</li><li>0139.00</li><li>0140.00</li><li>0141.01</li><li>0141.02</li><li>0142.00</li><li>0150.00</li><li>0151.00</li><li>0152.00</li><li>0153.00</li><li>0154.00</li><li>0155.00</li><li>0156.01</li><li>0156.02</li><li>0157.00</li><li>0158.00</li><li>0159.01</li><li>0159.02</li><li>0160.00</li><li>0161.00</li><li>0162.00</li><li>0163.00</li><li>0164.00</li><li>0165.00</li><li>0166.00</li><li>0167.01</li><li>0167.02</li>
+            </ul>
+     	</div>
+
+		<div class="col-sm-2 col-xs-4">
+            <ul>
+                <li>0168.00</li><li>0169.01</li><li>0169.02</li><li>0170.00</li><li>0171.00</li><li>0172.00</li><li>0173.00</li><li>0174.00</li><li>0175.01</li><li>0175.02</li><li>0176.00</li><li>0180.00</li><li>0181.01</li><li>0181.02</li><li>0182.00</li><li>0183.00</li><li>0184.01</li><li>0184.02</li><li>0185.01</li><li>0185.02</li><li>0186.00</li><li>0187.00</li><li>0188.00</li><li>0189.00</li><li>0190.01</li><li>0190.02</li><li>0191.00</li><li>0192.00</li><li>0193.00</li><li>0194.01</li><li>0194.02</li><li>0194.03</li><li>0194.04</li><li>0195.00</li><li>0196.00</li><li>0200.00</li><li>0201.00</li><li>0202.00</li><li>0203.00</li><li>0204.00</li><li>0205.00</li><li>0206.01</li><li>0206.02</li><li>0207.00</li><li>0208.00</li><li>0209.00</li><li>0210.00</li><li>0211.00</li><li>0212.00</li><li>0213.00</li><li>0214.00</li><li>0215.00</li><li>0216.00</li><li>0217.00</li><li>0218.00</li><li>0219.00</li><li>0220.00</li><li>0221.01</li><li>0221.02</li><li>0222.01</li><li>0222.02</li><li>0223.00</li><li>0224.00</li><li>0225.01</li><li>0225.02</li><li>0226.00</li><li>0227.00</li><li>0228.00</li><li>0229.00</li><li>0230.01</li><li>0230.02</li><li>0231.00</li><li>0232.00</li><li>0233.00</li><li>0234.00</li><li>0235.01</li><li>0235.02</li><li>0236.01</li><li>0236.02</li><li>0237.01</li><li>0237.02</li><li>0237.03</li><li>0238.01</li><li>0238.02</li><li>0239.00</li><li>0240.01</li><li>0240.02</li><li>0241.00</li><li>0242.00</li><li>0243.01</li><li>0243.02</li><li>0244.01</li><li>0244.02</li><li>0245.00</li><li>0246.00</li><li>0247.01</li><li>0247.02</li><li>0248.02</li><li>0248.03</li><li>0248.04</li><li>0248.05</li><li>0249.01</li><li>0249.03</li><li>0249.04</li><li>0249.05</li><li>0250.01</li><li>0250.02</li><li>0250.04</li><li>0250.05</li><li>0260.01</li><li>0260.03</li><li>0260.04</li><li>0260.05</li><li>0261.00</li><li>0262.01</li><li>0262.02</li><li>0263.02</li><li>0263.03</li><li>0263.04</li><li>0264.00</li><li>0265.00</li><li>0266.00</li><li>0267.00</li><li>0268.00</li><li>0269.01</li><li>0269.02</li><li>0270.01</li><li>0270.02</li><li>0271.01</li><li>0271.02</li><li>0272.01</li><li>0272.02</li><li>0273.01</li><li>0273.02</li><li>0274.01</li><li>0274.02</li><li>0275.00</li><li>0276.01</li><li>0276.02</li><li>0277.00</li><li>0278.00</li><li>0279.01</li><li>0279.02</li><li>0280.00</li><li>0281.01</li><li>0281.02</li><li>0282.00</li><li>0283.01</li><li>0283.02</li><li>0284.00</li><li>0285.00</li><li>0286.00</li><li>0287.01</li><li>0287.02</li><li>0288.00</li><li>0289.00</li><li>0290.00</li><li>0291.01</li><li>0291.02</li><li>0292.00</li><li>0293.00</li><li>0294.01</li><li>0294.02</li><li>0295.00</li><li>0296.00</li><li>0297.01</li><li>0297.02</li><li>0298.00</li><li>0299.01</li><li>0299.02</li><li>0300.00</li><li>0301.01</li><li>0301.03</li><li>0301.04</li><li>0302.01</li><li>0302.02</li><li>0302.03</li><li>0303.00</li><li>0304.01</li><li>0304.02</li><li>0304.03</li>
+            </ul>
+		</div>
+
+
+        <div class="col-sm-2 col-xs-4">
+            <ul>
+                <li>0304.04</li><li>0304.05</li><li>0304.06</li><li>0305.01</li><li>0305.03</li><li>0305.04</li><li>0306.01</li><li>0306.02</li><li>0307.03</li><li>0307.04</li><li>0307.05</li><li>0307.06</li><li>0307.07</li><li>0308.01</li><li>0308.02</li><li>0309.00</li><li>0310.01</li><li>0310.02</li><li>0311.02</li><li>0311.03</li><li>0311.04</li><li>0311.05</li><li>0311.06</li><li>0312.02</li><li>0312.03</li><li>0312.04</li><li>0312.05</li><li>0312.06</li><li>0312.07</li><li>0313.00</li><li>0314.01</li><li>0314.02</li><li>0315.01</li><li>0315.02</li><li>0315.03</li><li>0316.01</li><li>0316.03</li><li>0316.04</li><li>0316.05</li><li>0316.06</li><li>0317.02</li><li>0317.03</li><li>0317.04</li><li>0317.05</li><li>0318.00</li><li>0319.00</li><li>0320.01</li><li>0320.02</li><li>0321.01</li><li>0321.02</li><li>0322.01</li><li>0322.02</li><li>0323.01</li><li>0323.02</li><li>0324.01</li><li>0324.02</li><li>0324.03</li><li>0324.05</li><li>0324.06</li><li>0330.00</li><li>0331.01</li><li>0331.03</li><li>0331.04</li><li>0332.00</li><li>0333.00</li><li>0334.00</li><li>0335.00</li><li>0336.00</li><li>0337.00</li><li>0338.00</li><li>0339.00</li><li>0340.00</li><li>0341.02</li><li>0341.03</li><li>0341.04</li><li>0342.00</li><li>0343.00</li><li>0344.01</li><li>0344.02</li><li>0345.00</li><li>0346.01</li><li>0346.02</li><li>0347.00</li><li>0348.00</li><li>0349.00</li><li>0350.00</li><li>0351.01</li><li>0351.02</li><li>0352.00</li><li>0353.02</li><li>0353.03</li><li>0353.04</li><li>0354.00</li><li>0355.02</li><li>0355.03</li><li>0355.04</li><li>0356.00</li><li>0357.01</li><li>0357.02</li><li>0358.01</li><li>0358.02</li><li>0358.03</li><li>0359.00</li><li>0360.00</li><li>0361.01</li><li>0361.02</li><li>0362.01</li><li>0362.02</li><li>0362.03</li><li>0362.04</li><li>0363.02</li><li>0363.04</li><li>0363.05</li><li>0363.06</li><li>0363.07</li><li>0364.01</li><li>0364.02</li><li>0365.00</li><li>0366.00</li><li>0367.01</li><li>0367.02</li><li>0368.01</li><li>0368.02</li><li>0369.00</li><li>0370.01</li><li>0370.02</li><li>0370.03</li><li>0371.00</li><li>0372.00</li><li>0373.00</li><li>0374.01</li><li>0374.02</li><li>0374.03</li><li>0375.01</li><li>0375.02</li><li>0375.03</li><li>0375.04</li><li>0375.05</li><li>0376.01</li><li>0376.02</li><li>0376.04</li><li>0376.05</li><li>0376.06</li><li>0376.08</li><li>0376.09</li><li>0376.11</li><li>0376.12</li><li>0376.13</li><li>0376.14</li><li>0376.15</li><li>0376.16</li><li>0377.01</li><li>0377.02</li><li>0377.03</li><li>0377.04</li><li>0377.06</li><li>0377.07</li><li>0378.02</li><li>0378.03</li><li>0378.04</li><li>0378.05</li><li>0378.06</li><li>0378.07</li><li>0378.08</li><li>0378.11</li><li>0378.12</li><li>0378.14</li><li>0378.16</li><li>0378.17</li><li>0378.18</li><li>0378.19</li><li>0378.20</li><li>0378.21</li><li>0378.22</li><li>0378.23</li><li>0378.24</li><li>0378.25</li><li>0378.26</li><li>0378.27</li><li>0378.28</li><li>0400.02</li>
+            </ul>
+		</div>
+
+        <div class="col-sm-2 col-xs-4">
+            <ul>
+                <li>0400.03</li><li>0400.04</li><li>0400.06</li><li>0400.07</li><li>0400.08</li><li>0400.11</li><li>0400.12</li><li>0400.13</li><li>0400.14</li><li>0400.15</li><li>0400.16</li><li>0400.17</li><li>0400.18</li><li>0400.19</li><li>0400.20</li><li>0400.21</li><li>0400.22</li><li>0400.23</li><li>0401.04</li><li>0401.05</li><li>0401.06</li><li>0401.07</li><li>0401.08</li><li>0401.09</li><li>0401.10</li><li>0401.11</li><li>0401.13</li><li>0401.14</li><li>0401.15</li><li>0401.17</li><li>0401.18</li><li>0401.19</li><li>0401.20</li><li>0401.21</li><li>0401.22</li><li>0401.23</li><li>0402.01</li><li>0402.02</li><li>0402.03</li><li>0402.04</li><li>0402.05</li><li>0402.06</li><li>0402.07</li><li>0402.08</li><li>0402.09</li><li>0402.10</li><li>0402.12</li><li>0402.13</li><li>0403.01</li><li>0403.03</li><li>0403.04</li><li>0403.05</li><li>0403.07</li><li>0403.09</li><li>0403.10</li><li>0403.11</li><li>0403.12</li><li>0403.13</li><li>0403.14</li><li>0410.02</li><li>0410.03</li><li>0410.04</li><li>0410.05</li><li>0410.07</li><li>0410.09</li><li>0410.10</li><li>0410.11</li><li>0410.12</li><li>0410.13</li><li>0410.14</li><li>0410.15</li><li>0411.01</li><li>0411.04</li><li>0411.07</li><li>0411.08</li><li>0411.09</li><li>0411.12</li><li>0411.15</li><li>0411.16</li><li>0411.17</li><li>0411.18</li><li>0411.19</li><li>0411.20</li><li>0411.21</li><li>0411.22</li><li>0411.23</li><li>0411.24</li><li>0411.25</li><li>0411.26</li><li>0411.27</li><li>0412.01</li><li>0412.02</li><li>0412.04</li><li>0412.06</li><li>0412.08</li><li>0412.10</li><li>0412.11</li><li>0412.12</li><li>0412.13</li><li>0412.14</li><li>0412.15</li><li>0412.18</li><li>0412.19</li><li>0412.20</li><li>0412.21</li><li>0412.22</li><li>0412.23</li><li>0412.24</li><li>0413.00</li><li>0420.03</li><li>0420.05</li><li>0420.06</li><li>0420.08</li><li>0420.09</li><li>0420.10</li><li>0420.11</li><li>0420.13</li><li>0420.14</li><li>0420.15</li><li>0421.01</li><li>0421.04</li><li>0421.05</li><li>0421.06</li><li>0421.07</li><li>0422.02</li><li>0422.03</li><li>0422.04</li><li>0422.05</li><li>0422.06</li><li>0423.01</li><li>0423.02</li><li>0424.04</li><li>0424.05</li><li>0424.07</li><li>0424.08</li><li>0424.09</li><li>0424.10</li><li>0424.11</li><li>0424.12</li><li>0424.13</li><li>0430.02</li><li>0430.03</li><li>0430.04</li><li>0431.01</li><li>0431.02</li><li>0440.00</li><li>0441.02</li><li>0441.03</li><li>0441.04</li><li>0442.02</li><li>0442.03</li><li>0442.04</li><li>0442.05</li><li>0442.06</li><li>0450.02</li><li>0450.03</li><li>0450.05</li><li>0450.06</li><li>0451.01</li><li>0451.02</li><li>0451.03</li><li>0451.05</li><li>0451.06</li><li>0451.07</li><li>0452.01</li><li>0452.02</li><li>0452.03</li><li>0452.05</li><li>0452.06</li><li>0452.07</li><li>0455.00</li><li>0456.01</li><li>0456.02</li><li>0456.03</li><li>0460.01</li><li>0460.02</li><li>0461.01</li><li>0461.02</li><li>0470.00</li><li>0471.00</li><li>0472.00</li>
+            </ul>
+		</div>
+
+        <div class="col-sm-2 col-xs-4">
+            <ul>
+                <li>0473.01</li><li>0473.02</li><li>0473.03</li><li>0474.00</li><li>0475.00</li><li>0476.00</li><li>0480.01</li><li>0480.02</li><li>0481.01</li><li>0481.02</li><li>0482.00</li><li>0483.01</li><li>0483.02</li><li>0484.01</li><li>0484.02</li><li>0485.01</li><li>0485.02</li><li>0500.01</li><li>0500.02</li><li>0501.01</li><li>0501.02</li><li>0502.01</li><li>0502.02</li><li>0503.00</li><li>0504.00</li><li>0505.01</li><li>0505.02</li><li>0506.00</li><li>0507.00</li><li>0508.00</li><li>0509.01</li><li>0509.02</li><li>0510.00</li><li>0511.01</li><li>0511.02</li><li>0512.00</li><li>0513.01</li><li>0513.02</li><li>0513.03</li><li>0513.04</li><li>0514.01</li><li>0514.02</li><li>0515.01</li><li>0515.02</li><li>0516.01</li><li>0516.02</li><li>0516.03</li><li>0516.04</li><li>0516.05</li><li>0516.06</li><li>0516.08</li><li>0516.09</li><li>0516.11</li><li>0516.16</li><li>0516.17</li><li>0516.18</li><li>0516.20</li><li>0516.21</li><li>0516.22</li><li>0516.23</li><li>0516.24</li><li>0516.25</li><li>0516.26</li><li>0516.28</li><li>0516.29</li><li>0516.30</li><li>0516.31</li><li>0516.32</li><li>0516.37</li><li>0516.38</li><li>0516.39</li><li>0516.40</li><li>0516.41</li><li>0516.42</li><li>0516.43</li><li>0516.44</li><li>0516.45</li><li>0516.46</li><li>0516.47</li><li>0517.00</li><li>0518.00</li><li>0519.00</li><li>0520.01</li><li>0520.02</li><li>0520.05</li><li>0520.07</li><li>0520.08</li><li>0520.09</li><li>0520.10</li><li>0521.01</li><li>0521.02</li><li>0521.03</li><li>0521.04</li><li>0521.05</li><li>0521.06</li><li>0522.00</li><li>0523.00</li><li>0524.01</li><li>0524.02</li><li>0525.01</li><li>0525.02</li><li>0526.01</li><li>0526.02</li><li>0527.01</li><li>0527.02</li><li>0527.03</li><li>0527.04</li><li>0527.05</li><li>0527.06</li><li>0527.07</li><li>0527.08</li><li>0527.09</li><li>0528.01</li><li>0528.02</li><li>0528.10</li><li>0528.11</li><li>0528.12</li><li>0528.13</li><li>0528.15</li><li>0528.16</li><li>0528.18</li><li>0528.19</li><li>0528.20</li><li>0528.21</li><li>0528.22</li><li>0528.24</li><li>0528.25</li><li>0528.26</li><li>0528.31</li><li>0528.32</li><li>0528.33</li><li>0528.34</li><li>0528.35</li><li>0528.36</li><li>0528.37</li><li>0528.39</li><li>0528.40</li><li>0528.41</li><li>0528.42</li><li>0528.43</li><li>0528.44</li><li>0528.45</li><li>0528.46</li><li>0528.47</li><li>0528.48</li><li>0528.49</li><li>0529.01</li><li>0529.02</li><li>0530.01</li><li>0530.02</li><li>0531.01</li><li>0531.02</li><li>0532.01</li><li>0532.02</li><li>0540.01</li><li>0540.02</li><li>0550.01</li><li>0550.02</li><li>0560.00</li><li>0561.00</li><li>0562.02</li><li>0562.03</li><li>0562.04</li><li>0562.05</li><li>0562.06</li><li>0562.07</li><li>0562.08</li><li>0562.09</li><li>0562.11</li><li>0562.12</li><li>0562.13</li><li>0562.14</li><li>0562.15</li><li>0563.01</li><li>0563.02</li><li>0564.01</li><li>0564.02</li><li>0570.01</li><li>0570.02</li><li>0571.01</li><li>0571.02</li>
+            </ul>
+		</div>
+
+        <div class="col-sm-2 col-xs-4">
+            <ul>
+                <li>0572.01</li><li>0572.04</li><li>0572.05</li><li>0572.07</li><li>0572.08</li><li>0572.09</li><li>0572.10</li><li>0573.03</li><li>0573.05</li><li>0573.06</li><li>0573.07</li><li>0573.09</li><li>0573.10</li><li>0573.11</li><li>0574.00</li><li>0575.01</li><li>0575.02</li><li>0575.03</li><li>0575.04</li><li>0575.05</li><li>0575.07</li><li>0575.08</li><li>0576.04</li><li>0576.05</li><li>0576.06</li><li>0576.07</li><li>0576.09</li><li>0576.10</li><li>0576.16</li><li>0576.17</li><li>0576.18</li><li>0576.20</li><li>0576.22</li><li>0576.24</li><li>0576.29</li><li>0576.30</li><li>0576.31</li><li>0576.32</li><li>0576.33</li><li>0576.34</li><li>0576.35</li><li>0576.36</li><li>0576.37</li><li>0576.38</li><li>0576.39</li><li>0576.40</li><li>0576.41</li><li>0576.42</li><li>0576.43</li><li>0576.44</li><li>0576.45</li><li>0576.46</li><li>0576.47</li><li>0576.48</li><li>0576.49</li><li>0576.50</li><li>0576.51</li><li>0585.02</li><li>0585.03</li><li>0585.05</li><li>0585.07</li><li>0585.08</li><li>0585.09</li><li>0585.10</li><li>0586.01</li><li>0586.02</li><li>0587.01</li><li>0587.02</li><li>0590.00</li><li>0591.01</li><li>0591.02</li><li>0592.01</li><li>0592.02</li><li>0593.00</li><li>0600.01</li><li>0600.02</li><li>0601.00</li><li>0602.00</li><li>0603.00</li><li>0604.00</li><li>0605.00</li><li>0606.00</li><li>0607.00</li><li>0608.00</li><li>0609.00</li><li>0610.02</li><li>0610.03</li><li>0610.04</li><li>0611.00</li><li>0612.01</li><li>0612.03</li><li>0612.05</li><li>0612.07</li><li>0612.08</li><li>0612.10</li><li>0612.11</li><li>0612.12</li><li>0612.13</li><li>0612.14</li><li>0612.15</li><li>0612.18</li><li>0612.19</li><li>0612.20</li><li>0612.21</li><li>0612.22</li><li>0612.23</li><li>0612.24</li><li>0612.25</li><li>0613.01</li><li>0613.03</li><li>0613.04</li><li>0614.01</li><li>0614.02</li><li>0615.00</li><li>0620.01</li><li>0620.02</li><li>0620.04</li><li>0620.05</li><li>0620.06</li><li>0620.07</li><li>0621.00</li><li>0622.00</li><li>0623.00</li><li>0624.00</li><li>0625.00</li><li>0626.00</li><li>0630.00</li><li>0631.02</li><li>0631.03</li><li>0631.04</li><li>0632.00</li><li>0633.00</li><li>0634.01</li><li>0634.02</li><li>0635.00</li><li>0636.00</li><li>0637.00</li><li>0638.00</li><li>0639.00</li><li>0800.01</li><li>0800.02</li><li>0801.01</li><li>0801.02</li><li>0802.01</li><li>0802.02</li><li>0803.03</li><li>0803.04</li><li>0803.05</li><li>0803.06</li><li>0804.01</li><li>0804.05</li><li>0804.06</li><li>0804.07</li><li>0804.08</li><li>0804.10</li><li>0804.11</li><li>0804.12</li><li>0804.13</li><li>0805.02</li><li>0805.04</li><li>0805.05</li><li>0805.06</li><li>0805.08</li><li>0805.09</li><li>0805.10</li><li>0805.12</li><li>0805.13</li><li>0806.00</li><li>0807.00</li><li>0810.01</li><li>0810.02</li><li>0810.03</li><li>0810.04</li><li>0810.05</li><li>0811.00</li><li>0812.00</li><li>0820.01</li><li>0820.02</li><li>0820.03</li><li>0830.00</li><li>0831.01</li><li>0831.02</li><li>0832.00</li>
+            </ul>
+		</div>
+</div>
+
+
+</details>
+
+
+<!-- ContentEnd -->
+<div class="row pagedetails">
+	<div class="col-sm-6 col-lg-4 mrgn-tp-sm">
+		<a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default btn-block">Report a problem or mistake on this page</a>
+	</div>
+	<div class="col-sm-3 text-right pull-right mrgn-tp-sm">
+		<div class="wb-share wb-init wb-share-inited" data-wb-share="{&quot;filter&quot;: [&quot;email&quot;, &quot;facebook&quot;,&quot;twitter&quot;,&quot;linkedin&quot;,&quot;googleplus&quot;,&quot;reddit&quot;,&quot;tumblr&quot;], &quot;pnlId&quot;: &quot;pnl6&quot;, &quot;lnkClass&quot;: &quot;btn btn-default btn-block&quot;}" id="wb-auto-2"><section id="shr-pg-pnl6" class="shr-pg mfp-hide modal-dialog modal-content overlay-def"><header class="modal-header"><h2 class="modal-title">Share this page</h2></header><div class="modal-body"><ul class="list-unstyled colcount-xs-2"><li><a href="mailto:?to=&amp;subject=Census%20Tract%20Reference%20Maps%2C%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations&amp;body=https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00%0A" class="shr-lnk email btn btn-default" target="_blank">Email</a></li><li><a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00&amp;t=Census%20Tract%20Reference%20Maps%2C%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations" class="shr-lnk facebook btn btn-default" target="_blank">Facebook</a></li><li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00&amp;hl=en" class="shr-lnk googleplus btn btn-default" target="_blank">Google+</a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00&amp;title=Census%20Tract%20Reference%20Maps%2C%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations&amp;ro=false&amp;summary=&amp;source=" class="shr-lnk linkedin btn btn-default" target="_blank">LinkedIn®</a></li><li><a href="http://reddit.com/submit?url=https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00&amp;title=Census%20Tract%20Reference%20Maps%2C%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations" class="shr-lnk reddit btn btn-default" target="_blank">reddit</a></li><li><a href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00&amp;name=Census%20Tract%20Reference%20Maps%2C%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations&amp;description=" class="shr-lnk tumblr btn btn-default" target="_blank">tumblr</a></li><li><a href="http://twitter.com/home?status=Census%20Tract%20Reference%20Maps%2C%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations%20https%3A%2F%2Fwww12.statcan.gc.ca%2Fcensus-recensement%2F2011%2Fgeo%2Fmap-carte%2Fref%2Fdownload_CMA_CT-telecharger_RMR_SR-eng.cfm%3FPRCODE%3D35%26CACODE%3D535%26MAP%3D2011-92146-535-00" class="shr-lnk twitter btn btn-default" target="_blank">Twitter</a></li></ul><p class="col-sm-12 shr-dscl">No endorsement of any products or services is expressed or implied.</p><div class="clearfix"></div></div></section><a href="#shr-pg-pnl6" aria-controls="shr-pg-pnl6" class="shr-opn wb-lbx btn btn-default btn-block wb-lbx-inited wb-init" id="wb-auto-3"><span class="glyphicon glyphicon-share"></span>Share this page</a></div>
+	</div>
+	<div class="datemod col-xs-12 mrgn-tp-lg">
+		<dl id="wb-dtmd">
+			<dt>Date modified: </dt>
+			<dd>
+				<time property="dateModified"> 2019-04-26 				</time>
+			</dd>
+		</dl>
+	</div>
+</div>
+</main><style scoped="">
+#wb-sec h3 {
+    border: 1px solid #ddd;
+    border-bottom: 5px solid #335075;
+    font-size: 1.1em;
+    margin: 15px 0 1px;
+    padding: 15px;
+}
+#wb-sec .list-group .list-group .list-group-item {
+    background-color: #e6e6e6;
+    color: #000;
+}
+.list-group-item-transparent {
+background-color:#FFF !important; 
+color: #000;
+}
+.list-group-item-transparent-border-top {
+	border-top:3px solid #666;
+}
+a.list-group-item-transparent[href]:hover {
+	background-color:#BBB !important;
+}
+</style>
+
+<nav class="wb-sec col-md-3 col-md-pull-9" typeof="SiteNavigationElement" id="wb-sec" role="navigation">
+  <h2 id="wb-sec-h" class="wb-inv">Section menu</h2>
+  <ul class="list-group menu list-unstyled">
+    <li>
+      <h3 class="wb-navcurr">2011 Census Program</h3>
+      <ul class="list-group menu list-unstyled">
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/rt-td/index-eng.cfm" title="Topics &lt; 2011 Census">Topics</a> </li>
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/dp-pd/index-eng.cfm" title="Data products &lt; 2011 Census">Data products</a> </li>
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/as-sa/index-eng.cfm" title="Analytical products &lt; 2011 Census">Analytical products</a> </li>
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/ref/index-eng.cfm" title="Reference materials &lt; 2011 Census">Reference materials</a> </li>
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/geo/index-eng.cfm" title="Geography &lt; 2011 Census">Geography</a> </li>
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/consultation/index-eng.cfm" title="Consultation &lt; 2011 Census">Consultation</a> </li>
+        <li><a class="list-group-item" href="https://www12.statcan.gc.ca/census-recensement/2011/serv/index-eng.cfm" title="Custom services &lt; 2011 Census">Custom services</a> </li>
+        <li><a class="list-group-item" href="http://www.statcan.gc.ca/ca-ra2011/index-eng.htm" title="Census of Agriculture &lt; 2011 Census">Census of Agriculture</a> </li>
+        <li><a class="list-group-item list-group-item-transparent list-group-item-transparent-border-top" href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm" title="Census Program">2016 Census Program</a></li>
+        <li><a class="list-group-item list-group-item-transparent" href="https://www12.statcan.gc.ca/census-recensement/pc-eng.cfm">Previous censuses</a></li>        
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+</div>
+</div><footer role="contentinfo" id="wb-info">
+	<nav role="navigation" class="container wb-navcurr">
+		<h2 class="wb-inv">About government</h2>
+		<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+			<li><a href="https://www.statcan.gc.ca/eng/reference/refcentre/index?MM=1">Contact us</a></li>
+			<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+			<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+			<li><a href="https://www.canada.ca/en/news.html">News</a></li>
+			<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+			<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+			<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+			<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+			<li><a href="http://open.canada.ca/en/">Open government</a></li>
+		</ul>
+	</nav>
+	<div class="brand">
+		<div class="container">
+			<div class="row">
+				<nav class="col-md-10 ftr-urlt-lnk">
+					<h2 class="wb-inv">About this site</h2>
+					<ul>
+						<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+						<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+						<li><a href="https://www.canada.ca/en/government/about.html">About Canada.ca</a></li>
+						<li><a href="https://www.statcan.gc.ca/eng/reference/important-notices?MM=1">Terms and conditions</a></li>
+						<li><a href="https://www.statcan.gc.ca/eng/reference/privacy?MM=1">Privacy</a></li>
+					</ul>
+				</nav>
+				<div class="col-xs-6 visible-sm visible-xs tofpg">
+					<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+				</div>
+				<div class="col-xs-6 col-md-2 text-right">
+					<img src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/wmms-blk.svg" alt="Symbol of the Government of Canada"><span class="wb-inv">Government of Canada</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!--[if gte IE 9 | !IE ]><!-->
+
+<script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/wet-boew.js"></script><span id="wb-rsz" class="wb-init">&nbsp;</span>
+<script src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/theme.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/wet-boew4b/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+
+<!-- LiveZilla Script BEGIN -->
+<script type="text/javascript">
+var lz_data = {overwrite:false,language:'en'};
+</script><script type="text/javascript" id="c2e78f4994aa191dd320f0f115f8fd70" src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/script.php" defer="defer"></script>
+<!-- LiveZilla Script END -->
+
+<script type="text/javascript">_satellite.pageBottom();</script>
+
+<!-- CustomScriptsJSStart -->
+<!-- CustomScriptsJSEnd -->
+
+
+<div><!-- livezilla.net PLACE SOMEWHERE IN BODY -->
+<!-- PASS THRU DATA OBJECT -->
+<script type="text/javascript">
+var lz_data = {overwrite:false,language:'en'};
+</script>
+<!-- PASS THRU DATA OBJECT -->
+
+<div id="lvztr_fb6" style="display:none"><script async="" type="text/javascript" src="Census%20Tract%20Reference%20Maps,%20by%20Census%20Metropolitan%20Areas%20or%20Census%20Agglomerations_files/server.php"></script></div><script id="lz_r_scr_c2e78f4994aa191dd320f0f115f8fd70" type="text/javascript" defer="defer">lz_ovlel = [{type:"wm",icon:"commenting"},{type:"chat",icon:"comments",counter:true}];lz_ovlel_rat = 1.2;lz_code_id="c2e78f4994aa191dd320f0f115f8fd70";var script = document.createElement("script");script.async=true;script.type="text/javascript";var src = "https://www.statcan.gc.ca/livechat/server.php?rqst=track&output=jcrpt&hfk=MQ__&ovlv=djI_&ovlc=MQ__&esc=IzJlOGFlNQ__&epc=IzMwOTFmMg__&ovlts=MA__&nse="+Math.random();script.src=src;document.getElementById('lvztr_fb6').appendChild(script);</script>
+<!-- livezilla.net PLACE SOMEWHERE IN BODY --></div><div id="lz_overlay_chat" style="display: none; position: fixed; width: 380px; height: 622px; margin: 0px 42px 113px 0px; inset: auto 0px 0px auto; z-index: 20000001; overflow: visible;"><div id="lz_chat_overlay_pointer_h" class="lz_chat_overlay_pointer" style="display:none;border-top:12px solid transparent; border-left: 12px solid #eee;border-bottom: 12px solid transparent;">
+    <div style="top:-10px;left:-12px;border-top:10px solid transparent; border-left: 10px solid #fff;border-bottom: 10px solid transparent;"></div>
+</div>
+<div id="lz_chat_overlay_pointer_v" class="lz_chat_overlay_pointer" style="right: 56.5px; z-index: 20001300; bottom: 100px; display: none;">
+    <div style="top:-12px;left:-10px;border-left:10px solid transparent; border-top: 10px solid #fff;border-right: 10px solid transparent;"></div>
+</div>
+<div id="lz_chat_overlay_main" class="lz_chat_base notranslate" role="application" aria-labelledby="lz_overlay_module_chat" style="border-radius: 10px;" onclick="lz_chat_switch_options_table(true,1);">
+    <div id="lz_chat_overlay_text" class="lz_chat_unselectable" style="background:#3091f2;" onclick="OverlayChatWidgetV2.Maximize();">We are online - chat with us</div>
+    <div role="button" onkeydown="OverlayChatWidgetV2.SetMode('',true,null,event);" tabindex="0" class="lz_a11y_min" width="20" height="20" onclick="OverlayChatWidgetV2.SetMode('',true);"><svg focusable="false" id="lz_chat_overlay_minimize" class="lz_chat_overlay_icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="lz_chat_overlay_minimize-title"><title tabindex="-1" id="lz_chat_overlay_minimize-title">Close live chat</title><path transform="scale(.012)" d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+    <div id="lz_chat_content">
+        <div id="lz_overlay_phone_inbound" class="lz_chat_module" style="display: none;">
+            <div class="lz_chat_header"><h2>Hotline</h2></div>
+            <a id="lz_chat_data_phone_header_number" style="color:#2e8ae5;"></a>
+            <div id="lz_chat_data_phone_header_text"></div>
+        </div>
+        <div id="lz_chat_data_form" class="lz_chat_module" style="z-index: 1000; top: 0px; display: none;">
+            <div id="lz_chat_data_header" class="lz_chat_header"><h2>Start StatCan Live Chat</h2></div>
+            <div id="lz_chat_data_form_inputs">
+                <div>
+                    <div id="lz_chat_data_header_text">We're here to 
+help! In order to help us serve you better, please provide some 
+information before initiating the chat with a representative.</div>
+
+                    <!--chat_login_group_top-->
+                    <input type="hidden" id="lz_form_active_111" value="true">
+<input type="hidden" id="lz_form_ph_111" value="Name">
+<table id="lz_form_111" class="lz_input">
+	<tbody><tr>
+		<td><input name="form_111" type="text" placeholder="Name" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('111',this.value);" onkeyup="return lz_chat_save_input_value('111',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_111" style="display:none;"></div>
+            <div id="lz_form_mandatory_111" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_112" value="true">
+<input type="hidden" id="lz_form_ph_112" value="Email">
+<table id="lz_form_112" class="lz_input">
+	<tbody><tr>
+		<td><input name="form_112" type="text" placeholder="Email" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('112',this.value);" onkeyup="return lz_chat_save_input_value('112',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_112" style="display:none;"></div>
+            <div id="lz_form_mandatory_112" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_113" value="false">
+<input type="hidden" id="lz_form_ph_113" value="Company">
+<table id="lz_form_113" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_113" type="text" placeholder="Company" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('113',this.value);" onkeyup="return lz_chat_save_input_value('113',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_113" style="display:none;"></div>
+            <div id="lz_form_mandatory_113" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_114" value="true">
+<input type="hidden" id="lz_form_ph_114" value="Question">
+<table id="lz_form_114" class="lz_input">
+	<tbody><tr>
+		<td><textarea id="a114" placeholder="Question" name="form_114" class="lz_form_base lz_form_box lz_form_area" onchange="lz_global_impose_max_length(this, 600);lz_chat_save_input_value('114',this.value);" onkeyup="lz_global_impose_max_length(this, 600);lz_chat_save_input_value('114',this.value);" onkeydown="return lz_chat_save_input_value('114',this.value);"></textarea></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_114" style="display:none;"></div>
+            <div id="lz_form_mandatory_114" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+    <tr>
+    <td>
+        <div id="lz_chat_kb_match_info" class="lz_overlay_br_two" style="display:none;">
+            <span id="lz_chat_kb_match_info_text">There are Knowledge Base entries matching your question.</span>
+            <svg id="lz_chat_kb_match_close" class="lz_chat_overlay_icon" width="20" height="20" onclick="lz_chat_kb_deactivate(true,false);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg>
+            <div style="bottom:10px;left:20px;right:22px;position:absolute;background:#3091f2;" class="lz_overlay_chat_button lz_chat_unselectable lz_overlay_br_five" onclick="lz_chat_kb_deactivate(true,true);">Show</div>
+        </div>
+    </td>
+    <td></td>
+</tr>
+</tbody></table>
+
+<input type="hidden" id="lz_form_active_0" value="false">
+<input type="hidden" id="lz_form_ph_0" value="">
+<table id="lz_form_0" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_0" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('0',this.value);" onkeyup="return lz_chat_save_input_value('0',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_0" style="display:none;"></div>
+            <div id="lz_form_mandatory_0" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_116" value="false">
+<input type="hidden" id="lz_form_ph_116" value="Phone">
+<table id="lz_form_116" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_116" type="text" placeholder="Phone" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('116',this.value);" onkeyup="return lz_chat_save_input_value('116',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_116" style="display:none;"></div>
+            <div id="lz_form_mandatory_116" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_1" value="false">
+<input type="hidden" id="lz_form_ph_1" value="">
+<table id="lz_form_1" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_1" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('1',this.value);" onkeyup="return lz_chat_save_input_value('1',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_1" style="display:none;"></div>
+            <div id="lz_form_mandatory_1" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_2" value="false">
+<input type="hidden" id="lz_form_ph_2" value="">
+<table id="lz_form_2" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_2" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('2',this.value);" onkeyup="return lz_chat_save_input_value('2',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_2" style="display:none;"></div>
+            <div id="lz_form_mandatory_2" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_3" value="false">
+<input type="hidden" id="lz_form_ph_3" value="">
+<table id="lz_form_3" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_3" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('3',this.value);" onkeyup="return lz_chat_save_input_value('3',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_3" style="display:none;"></div>
+            <div id="lz_form_mandatory_3" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_4" value="false">
+<input type="hidden" id="lz_form_ph_4" value="">
+<table id="lz_form_4" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_4" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('4',this.value);" onkeyup="return lz_chat_save_input_value('4',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_4" style="display:none;"></div>
+            <div id="lz_form_mandatory_4" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_5" value="false">
+<input type="hidden" id="lz_form_ph_5" value="">
+<table id="lz_form_5" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_5" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('5',this.value);" onkeyup="return lz_chat_save_input_value('5',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_5" style="display:none;"></div>
+            <div id="lz_form_mandatory_5" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_6" value="false">
+<input type="hidden" id="lz_form_ph_6" value="">
+<table id="lz_form_6" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_6" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('6',this.value);" onkeyup="return lz_chat_save_input_value('6',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_6" style="display:none;"></div>
+            <div id="lz_form_mandatory_6" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_7" value="false">
+<input type="hidden" id="lz_form_ph_7" value="">
+<table id="lz_form_7" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_7" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('7',this.value);" onkeyup="return lz_chat_save_input_value('7',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_7" style="display:none;"></div>
+            <div id="lz_form_mandatory_7" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_8" value="false">
+<input type="hidden" id="lz_form_ph_8" value="">
+<table id="lz_form_8" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_8" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('8',this.value);" onkeyup="return lz_chat_save_input_value('8',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_8" style="display:none;"></div>
+            <div id="lz_form_mandatory_8" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_9" value="false">
+<input type="hidden" id="lz_form_ph_9" value="">
+<table id="lz_form_9" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_9" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('9',this.value);" onkeyup="return lz_chat_save_input_value('9',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_9" style="display:none;"></div>
+            <div id="lz_form_mandatory_9" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table><input type="hidden" id="lz_form_active_115" value="true">
+<input type="hidden" id="lz_form_ph_115" value="">
+<table id="lz_form_115" class="lz_input" style="display: none;">
+	<tbody><tr>
+		<td><input name="form_115" type="text" placeholder="" class="lz_form_base lz_form_box" maxlength="254" onchange="lz_chat_save_input_value('115',this.value);" onkeyup="return lz_chat_save_input_value('115',this.value);"></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_115" style="display:none;"></div>
+            <div id="lz_form_mandatory_115" style="display:none;"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+	</tr>
+</tbody></table>
+                    <br>
+<table class="lz_input" id="lz_group_selection_box">
+    <tbody><tr>
+        <td><strong>Department:</strong></td>
+        <td align="right"><select id="lz_form_groups" class="lz_form_base lz_form_box lz_form_select" onchange="lz_chat_change_group(this,true);" onkeyup="this.blur();" onclick="lz_chat_pre_change_group(this);"><option value="support" label=" Support" selected="selected"> Support</option></select></td>
+        <td class="lz_form_icon">
+            <div class="lz_form_info_box" id="lz_form_info_group" style="display:none;"></div>
+            <div id="lz_form_mandatory_group" style="display:none;" class="lz_input_icon lz_required"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+        </td>
+    </tr>
+</tbody></table>
+
+                    <table id="lz_form_tos" class="lz_input" style="display: none;">
+                        <tbody><tr>
+                            <td>
+                                <input id="lz_ccb_tos" class="lz_form_check" type="checkbox">
+                                <label id="lz_chat_tos_text" for="lz_ccb_tos" class="lz_form_check_label">I have read and understood the <a>Terms and Conditions</a>.</label>
+                            </td>
+                            <td class="lz_form_icon">
+                                <div id="lz_form_mandatory_tos" style="display:none;" class="lz_input_icon lz_required"><svg id="" class="lz_chat_overlay_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1152 1376v-160q0-14-9-23t-23-9h-96v-512q0-14-9-23t-23-9h-320q-14 0-23 9t-9 23v160q0 14 9 23t23 9h96v320h-96q-14 0-23 9t-9 23v160q0 14 9 23t23 9h448q14 0 23-9t9-23zm-128-896v-160q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v160q0 14 9 23t23 9h192q14 0 23-9t9-23zm640 416q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg></div>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <br>
+                    <div id="lz_chat_overlay_data_form_ok_button" role="button" class="lz_overlay_chat_button" style="background:#3091f2;" onkeydown="lz_chat_data_form_result(event);" onclick="lz_chat_data_form_result();" tabindex="0">Start StatCan Live Chat</div>
+                </div>
+            </div>
+        </div>
+        <div id="lz_overlay_module_tos" class="lz_chat_module" style="display: none;">
+            <div class="lz_chat_header"><h2>Terms and Conditions</h2></div>
+            <div id="lz_overlay_module_tos_content">
+                <div id="lz_chat_tos_text_box"></div>
+            </div>
+        </div>
+        <div id="lz_overlay_module_custom" class="lz_chat_module" style="visibility: hidden;">
+            <div class="lz_chat_header"><h2></h2></div>
+            <div id="lz_overlay_module_custom_content">
+                <iframe></iframe>
+            </div>
+        </div>
+        <div id="lz_overlay_module_feedback" class="lz_chat_module" style="visibility: hidden; display: none;">
+            <div class="lz_chat_header"><h2>Feedback</h2></div>
+            <div id="lz_overlay_module_feedback_content">
+                <iframe></iframe>
+            </div>
+        </div>
+        <div id="lz_overlay_module_knowledgebase" class="lz_chat_module" style="visibility: hidden;">
+            <div class="lz_chat_header"><h2>Search our Knowledge Base</h2></div>
+            <div id="lz_overlay_module_knowledgebase_content">
+                <iframe></iframe>
+            </div>
+        </div>
+        <div id="lz_chat_overlay_ticket" style="display: none;">
+            <div id="lz_chat_ticket_received" class="lz_overlay_chat_ticket_response" style="display: none;"><h2>Thank you!</h2>We have received your message and will be responding to your enquiry as soon as possible.</div>
+            <div id="lz_chat_ticket_flood" class="lz_overlay_chat_ticket_response">You have sent too many messages. Please wait some time and try again.</div>
+            <div class="lz_overlay_chat_button lz_chat_unselectable lz_overlay_br_five" style="background:#3091f2;" onclick="lz_chat_data_form_result();" onkeydown="lz_chat_data_form_result(event);" tabindex="0">Back</div>
+        </div>
+		<div id="lz_overlay_module_chat" class="lz_chat_module" style="display: block;">
+            <div class="lz_chat_header"><h2 id="lz_chat_operator_groupname" aria-live="assertive">StatCan Live Chat</h2><div class="wb-inv"></div></div>
+            <div id="lz_chat_state_bar" class="lz_chat_header" aria-live="assertive">
+                <div id="lz_chat_options_table" class="lz_chat_unselectable" style="z-index: 3000;">
+                    <div id="lz_cf_tr" onclick="lz_stop_propagation(event);lz_chat_switch_translation();" style="display:none;"><svg id="lz_chat_switch_tr" class="lz_chat_overlay_icon lz_chat_overlay_toggle_icon" width="20" height="20" onclick="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="fill:var(--lz-icon-color);"><path transform="scale(.012)" d="M1024 896q0-104-40.5-198.5t-109.5-163.5-163.5-109.5-198.5-40.5-198.5 40.5-163.5 109.5-109.5 163.5-40.5 198.5 40.5 198.5 109.5 163.5 163.5 109.5 198.5 40.5 198.5-40.5 163.5-109.5 109.5-163.5 40.5-198.5zm768 0q0-104-40.5-198.5t-109.5-163.5-163.5-109.5-198.5-40.5h-386q119 90 188.5 224t69.5 288-69.5 288-188.5 224h386q104 0 198.5-40.5t163.5-109.5 109.5-163.5 40.5-198.5zm128 0q0 130-51 248.5t-136.5 204-204 136.5-248.5 51h-768q-130 0-248.5-51t-204-136.5-136.5-204-51-248.5 51-248.5 136.5-204 204-136.5 248.5-51h768q130 0 248.5 51t204 136.5 136.5 204 51 248.5z"></path></svg></div>
+                    <div title="Switch sounds on/off" id="lz_cf_so" onclick="lz_stop_propagation(event);lz_chat_switch_sound();" onkeydown="lz_stop_propagation(event);lz_chat_switch_sound(event);" tabindex="0" style="display: block;"></div>
+                    <div title="Send chat transcript by email" id="lz_cf_et" onclick="lz_stop_propagation(event);lz_chat_switch_transcript(false);" style="display:block;" onkeydown="lz_stop_propagation(event);lz_chat_switch_transcript(false,event);" tabindex="0"></div>
+                    <div id="lz_cf_ed" style="display:none" onclick="lz_chat_switch_options_table();lz_chat_switch_details(false);" onkeydown="lz_chat_switch_details(false,event);" tabindex="0"></div>
+                    <div id="lz_cf_pr" onclick="lz_chat_switch_options_table();lz_chat_print();" style="display: none;"></div>
+                    <div id="lz_cf_ec" onclick="lz_chat_switch_options_table();OverlayChatWidgetV2.ExitChat();"></div>
+                </div>
+                <div role="button" onkeydown="lz_chat_switch_options_table(null,event);lz_stop_propagation();" tabindex="0" class="lz_a11y_opt" width="20" height="20" onclick="lz_chat_switch_options_table();lz_stop_propagation(evt);"><svg focusable="false" id="lz_chat_options_button" class="lz_chat_overlay_icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="lz_chat_options_button-title" style="display: block;"><title tabindex="-1" id="lz_chat_options_button-title"></title><path transform="scale(.012)" d="M576 736v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68zm512 0v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68zm512 0v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68z"></path></svg></div>
+                <svg id="lz_chat_feedback_init" class="lz_chat_overlay_icon" width="20" height="20" onclick="OverlayChatWidgetV2.ToggleFeedback(true);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path transform="scale(.012)" d="M384 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1152-576q0-51-39-89.5t-89-38.5h-352q0-58 48-159.5t48-160.5q0-98-32-145t-128-47q-26 26-38 85t-30.5 125.5-59.5 109.5q-22 23-77 91-4 5-23 30t-31.5 41-34.5 42.5-40 44-38.5 35.5-40 27-35.5 9h-32v640h32q13 0 31.5 3t33 6.5 38 11 35 11.5 35.5 12.5 29 10.5q211 73 342 73h121q192 0 192-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5q32-1 53.5-47t21.5-81zm128-1q0 89-49 163 9 33 9 69 0 77-38 144 3 21 3 43 0 101-60 178 1 139-85 219.5t-227 80.5h-129q-96 0-189.5-22.5t-216.5-65.5q-116-40-138-40h-288q-53 0-90.5-37.5t-37.5-90.5v-640q0-53 37.5-90.5t90.5-37.5h274q36-24 137-155 58-75 107-128 24-25 35.5-85.5t30.5-126.5 62-108q39-37 90-37 84 0 151 32.5t102 101.5 35 186q0 93-48 192h176q104 0 180 76t76 179z"></path></svg>
+            </div>
+            <div id="lz_chat_members_box" style="bottom: 66px; display: none;"></div>
+            <div id="lz_chat_content_box" style="display: block; bottom: 66px; left: 0px;" aria-live="assertive" class="lz_chat_content_box_fh" onscroll="lz_chat_scroll();"><div id="lz_chat_content_inlay" style="width: 379px;"><div><div class="lz_overlay_chat_status_inner" align="center">
+
+				Do not share any personal information through the live chat.<br><br>We are online! Please type your message or comment and we will connect you to one of our agents.
+
+</div></div></div></div>
+            <div id="lz_chat_overlay_bottom" style="height: 60px;">
+                <div id="lz_chat_bot_reply_loading" style="display:none;" aria-live="assertive">
+                    <div class="lz_anim_point_load"><span></span><span></span><span></span></div>
+                </div>
+                <div id="lz_chat_text_frame" aria-live="assertive">
+                    <textarea aria-label="Type a message" id="lz_chat_text" placeholder="Type a message" onchange="lz_overlay_chat_impose_max_length(this, 600);OverlayChatWidgetV2.UpdateChatInputUI();" onkeydown="lz_overlay_chat_impose_max_length(this, 600);OverlayChatWidgetV2.UpdateChatInputUI();" onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;" onkeyup="lz_overlay_chat_impose_max_length(this, 600);OverlayChatWidgetV2.InputKeyUp(event);" style="height: 50px;"></textarea>
+                </div>
+                <div id="lz_chat_icon_frame">
+                    <div role="button" onkeydown="OverlayChatWidgetV2.InputKeyUp(event);" tabindex="0" class="lz_a11y_send" width="20" height="20" onclick="OverlayChatWidgetV2.InputKeyUp({keyCode:13,ctrlKey:false});lz_chat_set_focus();lz_stop_propagation(evt);"><svg focusable="false" id="lz_chat_text_send" class="lz_chat_overlay_icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="lz_chat_text_send-title" style="display: block; right: 70px;"><title tabindex="-1" id="lz_chat_text_send-title">Submit message</title><path transform="scale(.012)" d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45-14 8-31 8-11 0-24-5l-453-185-242 295q-18 23-49 23-13 0-22-4-19-7-30.5-23.5t-11.5-36.5v-349l864-1059-1069 925-395-162q-37-14-40-55-2-40 32-59l1664-960q15-9 32-9 20 0 36 11z"></path></svg></div>
+                    <div role="button" onkeydown="OverlayChatWidgetV2.InitFileUpload(event);" tabindex="0" class="lz_a11y_upload" width="20" height="20" onclick="OverlayChatWidgetV2.InitFileUpload();"><svg focusable="false" id="lz_chat_text_file" class="lz_chat_overlay_icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="lz_chat_text_file-title" style="right: 40px; display: block;"><title tabindex="-1" id="lz_chat_text_file-title">Upload a file</title><path transform="scale(.012)" d="M1596 1385q0 117-79 196t-196 79q-135 0-235-100l-777-776q-113-115-113-271 0-159 110-270t269-111q158 0 273 113l605 606q10 10 10 22 0 16-30.5 46.5t-46.5 30.5q-13 0-23-10l-606-607q-79-77-181-77-106 0-179 75t-73 181q0 105 76 181l776 777q63 63 145 63 64 0 106-42t42-106q0-82-63-145l-581-581q-26-24-60-24-29 0-48 19t-19 48q0 32 25 59l410 410q10 10 10 22 0 16-31 47t-47 31q-12 0-22-10l-410-410q-63-61-63-149 0-82 57-139t139-57q88 0 149 63l581 581q100 98 100 235z"></path></svg></div>
+                    <div role="button" onkeydown="OverlayChatWidgetV2.CaptureScreen(false,false,false,event);lz_stop_propagation();" tabindex="0" class="lz_a11y_camera" width="20" height="20" onclick="OverlayChatWidgetV2.CaptureScreen();lz_stop_propagation(evt);"><svg focusable="false" id="lz_chat_text_sc" class="lz_chat_overlay_icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="lz_chat_text_sc-title" style="display: block;"><title tabindex="-1" id="lz_chat_text_sc-title">Send a screenshot</title><path transform="scale(.012)" d="M1024 672q119 0 203.5 84.5t84.5 203.5-84.5 203.5-203.5 84.5-203.5-84.5-84.5-203.5 84.5-203.5 203.5-84.5zm704-416q106 0 181 75t75 181v896q0 106-75 181t-181 75h-1408q-106 0-181-75t-75-181v-896q0-106 75-181t181-75h224l51-136q19-49 69.5-84.5t103.5-35.5h512q53 0 103.5 35.5t69.5 84.5l51 136h224zm-704 1152q185 0 316.5-131.5t131.5-316.5-131.5-316.5-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5z"></path></svg></div>
+                    <input id="lz_overlay_file_upload" type="file" title="">
+                </div>
+            </div>
+            <div id="lz_chat_overlay_info" aria-live="assertive" style="bottom: 65px; display: none;"></div>
+        </div>
+        <div id="lz_chat_overlay_options_box_bg" style="z-index: 2000;"></div>
+        <div id="lz_chat_overlay_options_frame" style="z-index: 4000;">
+            <div id="lz_chat_overlay_options_box" style="height: 300px;">
+                <div id="lz_chat_overlay_option_function_fu">
+                    <iframe id="lz_chat_overlay_file_upload_frame"></iframe>
+                </div>
+                <svg id="lz_chat_overlay_options_close" class="lz_chat_overlay_icon" width="20" height="20" onclick="lz_chat_switch_options(lz_chat_option_function,false);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg>
+            </div>
+        </div>
+        <div id="lz_chat_overlay_loading" style="display: none;">
+            <div class="lz_anim_point_load"><span></span><span></span><span></span></div>
+        </div>
+	</div>
+    <!--<div id="lz_chat_apa" class="lz_overlay_chat_footer lz_chat_unselectable lz_overlay_chat_options_link"><!--param></div>-->
+</div>
+</div><div id="lz_overlay_wm" style="display: block; position: fixed; width: 57px; height: 57px; margin: 0px 40px 30px 0px; inset: auto 0px 0px auto; z-index: 20000000;"><div id="livezilla_wm_c" class="lz_chat_unselectable lz_overlay_wm_c"></div>
+<div id="livezilla_wm_d" class="lz_chat_unselectable lz_overlay_wm_desc" style="margin-top: -57px; font-size: 120%; line-height: 57px; width: 184.8px;"></div>
+<div id="livezilla_wm_bg" class="lz_chat_unselectable lz_overlay_wm_bg"></div>
+<div id="livezilla_wm" class="lz_chat_unselectable lz_overlay_wm_button lz_overlay_wm_sh_act lz_anim_slide_in" role="button" tabindex="0" style="height: 57px; width: 57px; z-index: 20000200; border-color: rgb(17, 129, 240); transform: translateY(0px); right: 0px; border-radius: 50%; position: relative; display: block; top: 0px; visibility: visible;" data-tid="wm" aria-label="Open live chat">
+    <svg class="lz_chat_unselectable lz_overlay_wm_icon" width="57" height="57" style="width:57px !important;height:57px !important" viewBox="-14.399999999999999 -13.2 57 57" xmlns="http://www.w3.org/2000/svg">
+        <path transform="scale(.016)" style="transform: scale(0.016);" d="M1408 768q0 139-94 257t-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t.5-6.5 2-6l2.5-5 3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5 353.5 68.5 256.5 186.5 94 257zm384 256q0 120-71 224.5t-195 176.5q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5 2 6 .5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230z"></path></svg>
+</div>
+<div id="livezilla_wm_chat" class="lz_chat_unselectable lz_overlay_wm_button lz_overlay_wm_sh_act lz_anim_slide_in" role="button" tabindex="0" style="height: 57px; width: 57px; z-index: 20000099; top: -57px; margin-bottom: 6px; border-color: rgb(17, 129, 240); transform: translateY(63px); right: 0px; border-radius: 50%; position: relative; display: none;" aria-label="Open live chat" data-did="livezilla_wm_d_chat" data-type="chat" data-tid="chat">
+    <svg class="lz_chat_unselectable lz_overlay_wm_icon" width="57" height="57" style="width:57px !important;height:57px !important" viewBox="-14.399999999999999 -13.2 57 57" xmlns="http://www.w3.org/2000/svg">
+        <path transform="scale(.016)" style="transform: scale(0.016);" d="M1408 768q0 139-94 257t-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t.5-6.5 2-6l2.5-5 3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5 353.5 68.5 256.5 186.5 94 257zm384 256q0 120-71 224.5t-195 176.5q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5 2 6 .5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230z"></path></svg>
+<div id="livezilla_wm_d_chat" class="lz_chat_unselectable lz_overlay_wm_desc lz_overlay_wm_sh_act" style="right: 57px; box-shadow: none; margin-top: -57px; font-size: 120%; line-height: 57px; width: 184.8px; border-radius: 10px 0px 0px 10px; z-index: 20000099;">StatCan Live Chat</div></div><div id="livezilla_wm_c_chat" class="lz_chat_unselectable lz_overlay_wm_c" style="z-index: 200000992;"></div></div><div id="lz_overlay_preview" style="display: none; position: fixed; width: 266px; margin: 0px 40px 93px 0px; inset: auto 0px 0px auto; z-index: 20000000;"><svg id="lz_wm_preview_close_icon" class="lz_chat_overlay_icon" width="20" height="20" onclick="OverlayChatWidgetV2.ResetPreviewPosts(true);OverlayChatWidgetV2.AnswerChatRequest(false,true);lz_stop_propagation(evt);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.012)" d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path></svg><div id="lz_overlay_preview_messages"></div><div id="lz_overlay_preview_tctrl" onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;" class="lz_preview_message" style="display: block; height: 60px;"></div></div></body></html>
