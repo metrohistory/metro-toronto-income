@@ -7,6 +7,7 @@ Tip: This is my new favorite tool for grabbing GeoJSON boundaries from Open Stre
 
 NOTE: Jack used http://Mapshaper.org to reproject all shapefiles to WGS84 and edit features from most sources below.
 
+![concept map](concept-map.png)
 
 Goal: create a Leaflet interactive map of metro Toronto with these layers, preferably by Friday Feb 28th or sooner, so that Jack may make a screenshot to include in a grant proposal that is due a few days later.
 
