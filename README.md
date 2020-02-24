@@ -1,11 +1,32 @@
 # toronto-cma-income-areas
-Toronto CMA income map with case study areas
+Toronto CMA 2016 income map with case study areas
+
+View map: https://metrohistory.org/toronto-cma-income-areas/
+
+Created by Ilya Ilyankou (https://www.picturedigits.com), Jack Dougherty (http://jackdougherty.org), and Jason Ellis (https://edst.educ.ubc.ca/facultystaff/jason-ellis/)
+
+## TO DO for Ilya
+- edit legend
+  - I like your color scheme and gradations. But could you possibly shift the "white" neutral color from 100-120% to 90-110%?
+  - change text to "Median Personal Income as % of Toronto CMA, Census 2016"
+  - place white rectangle underneath legend to improve readability
+- edit layers box
+  - change first to "Income 2015"
+  - rather than alphabetical order, list areas from left to right in this order: Etobicoke, York, Forest Hill, Scarborough
+  - York needs a bolder color to distinguish it from other black lines on map. How do you feel about hot pink, or recommend something else?
+- add attribution
+  - add "View sources and code" with link to this repo, similar to our On The Line maps
+
+## Notes
+- [Census Profile 2016, Statistics Canada](https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/page.cfm?Lang=E&Geo1=CMACA&Code1=535&Geo2=PR&Code2=01&SearchText=toronto&SearchType=Begins&SearchPR=01&B1=All&TABID=1&type=0)
+- Median total income in 2015 among recipients ($ CAN)	for entire Toronto CMA = 31,705, which was used to normalize census tracts as below or above 100% of this level
+- Geographic boundary files in `geodata` folder.
+  - Used http://Mapshaper.org to reproject original shapefiles to WGS84 and edit features according to sources.
+  - Census tract boundaries 2016 were simplified in Mapshaper.org to reduce file size from 5MB to 1MB.
+  - *Forest Hill borders are not perfectly aligned, but use for now*
+
 
 ## Jack's notes for Ilya
-
-Tip: This is my new favorite tool for grabbing GeoJSON boundaries from Open Street Map data: http://hanshack.com/geotools/gimmegeodata/
-
-NOTE: Jack used http://Mapshaper.org to reproject all shapefiles to WGS84 and edit features from most sources below.
 
 ![concept map](concept-map.png)
 
