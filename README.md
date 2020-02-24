@@ -14,6 +14,8 @@ Created by Ilya Ilyankou (https://www.picturedigits.com), Jack Dougherty (http:/
   - change first to "Income 2015"
   - rather than alphabetical order, list areas from left to right in this order: Etobicoke, York, Forest Hill, Scarborough
   - York needs a bolder color to distinguish it from other black lines on map. How do you feel about hot pink, or recommend something else?
+- add attribution
+  - add "View sources and code" with link to this repo, similar to our On The Line maps
 
 ## Notes
 - [Census Profile 2016, Statistics Canada](https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/page.cfm?Lang=E&Geo1=CMACA&Code1=535&Geo2=PR&Code2=01&SearchText=toronto&SearchType=Begins&SearchPR=01&B1=All&TABID=1&type=0)
