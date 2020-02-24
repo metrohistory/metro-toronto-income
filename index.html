@@ -164,18 +164,18 @@
 
     color_map_c1069d309803463d9d81ed1922e6ab74.xAxis = d3.svg.axis()
         .scale(color_map_c1069d309803463d9d81ed1922e6ab74.x)
-        .orient("top")
+        .orient("bottom")
         .tickSize(1)
         .tickValues([45, 60, 75, 90, 110, 150, 200, 270]);
 
     color_map_c1069d309803463d9d81ed1922e6ab74.svg = d3.select(".legend.leaflet-control").append("svg")
         .attr("id", 'legend')
         .attr("width", 450)
-        .attr("height", 40);
+        .attr("height", 50);
 
     color_map_c1069d309803463d9d81ed1922e6ab74.g = color_map_c1069d309803463d9d81ed1922e6ab74.svg.append("g")
         .attr("class", "key")
-        .attr("transform", "translate(25,16)");
+        .attr("transform", "translate(25,35)");
 
     color_map_c1069d309803463d9d81ed1922e6ab74.g.selectAll("rect")
         .data(color_map_c1069d309803463d9d81ed1922e6ab74.color.range().map(function(d, i) {
@@ -187,13 +187,16 @@
         }))
       .enter().append("rect")
         .attr("height", 10)
+        .attr("y", -10)
         .attr("x", function(d) { return d.x0; })
         .attr("width", function(d) { return d.x1 - d.x0; })
         .style("fill", function(d) { return d.z; });
 
     color_map_c1069d309803463d9d81ed1922e6ab74.g.call(color_map_c1069d309803463d9d81ed1922e6ab74.xAxis).append("text")
         .attr("class", "caption")
-        .attr("y", 21)
+        .attr("y", -16)
+        .style('font-size', '14px')
+        .style('font-weight', 'bold')
         .text('Median Personal Income as % of Toronto CMA, Census 2016');
     
         function geo_json_db8ef0553fcf43848efcd1d937227d4e_styler(feature) {
@@ -335,7 +338,7 @@
             L.control.layers(
                 layer_control_7bd01ee5521f45ec8e09d5e8a8fcc42f.base_layers,
                 layer_control_7bd01ee5521f45ec8e09d5e8a8fcc42f.overlays,
-                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+                {"autoZIndex": true, "collapsed": false, "position": "bottomright"}
             ).addTo(map_9f8605217f1b408b83f4a098798ee48e);
         
 
@@ -344,5 +347,12 @@
             }); 
 
 
+            var north = L.control({position: "bottomleft"});
+            north.onAdd = function(map) {
+                var div = L.DomUtil.create("div");
+                div.innerHTML = '<img src="north.png" style="height: 30px;" alt="North">';
+                return div;
+            }
+            north.addTo(map_9f8605217f1b408b83f4a098798ee48e);
 
 </script>
