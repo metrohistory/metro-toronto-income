@@ -1,7 +1,7 @@
 # toronto-cma-income-areas
 Toronto Census Metropolitan Area 2016 income map with case study areas
 
-View map: https://metrohistory.org/toronto-cma-income-areas/
+View map: https://metrohistory.github.io/toronto-cma-income-areas
 
 Created by Ilya Ilyankou (https://www.picturedigits.com), Jack Dougherty (http://jackdougherty.org), and Jason Ellis (https://edst.educ.ubc.ca/facultystaff/jason-ellis/)
 
